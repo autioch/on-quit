@@ -4,7 +4,10 @@
   "description": "Register callbacks to call when application exits",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha --reporter=list spec/**/*.spec.js",
+    "test:watch": "mocha --reporter=min --watch spec/**/*.spec.js & exit 0",
+    "lint": "eslint ./src --fix --ext .js",
+    "lint:test": "eslint ./spec --fix --ext .js"
   },
   "repository": {
     "type": "git",
