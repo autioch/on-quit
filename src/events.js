@@ -1,3 +1,5 @@
+/* eslint no-magic-numbers: 0 */
+
 /* Dictionary of events that the module listens.
  * - key is the name of the event.
  * - value is the code number that is sent to process.exit(). */

@@ -9,7 +9,7 @@ const execute = callOnce((code, codename, ...args) => {
   callbacks.forEach((callback) => callback(code, codename, ...args));
 
   /* Attached listener prevents termination - need to exit again. Only first process.exit triggers events. */
-  process.exit(code);
+  process.exit(code); // eslint-disable-line no-process-exit
 
   /* If a process is spawned by a parent, we need to properly pass the signal.
    * Right now this is disabled until I can test the best option */
